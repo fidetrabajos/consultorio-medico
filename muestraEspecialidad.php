@@ -178,9 +178,6 @@ echo'<OPTION VALUE="'.$row['id_especialidad'].'">'.$row['nombre'].'</OPTION>';
 <?php
 include("fondo.php");
 include("Config/config.php");
-
-
-
 ?>
 
 

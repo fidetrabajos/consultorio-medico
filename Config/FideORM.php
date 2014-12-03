@@ -24,7 +24,7 @@
 			$objeto = $this->generarObjeto();
 			$this->nombreColumnas = array_keys($this->obtenerPropiedades($objeto));	
 		}
-		
+
 		private function ExtraerValoresObjecto($objeto){
 			
 			$valores = '';
@@ -66,13 +66,15 @@
 		
 		private function RellenarObjeto($datos){
 			
-			$objeto = $this->generarObjeto();
-			foreach($objeto as $index=>&$propiedad){
-				$propiedad = $datos[$index];	
-				echo $index . '<br/>';
+			if(count($datos)){
+				$objeto = $this->generarObjeto();
+				foreach($objeto as $index=>&$propiedad){
+					$propiedad = $datos[$index];
+				}
+				return $objeto;
+			} else{
+				return null;
 			}
-			
-			return $objeto;
 		}
 		
 		public function ObtenerTodos(){
@@ -93,6 +95,24 @@
 			return $objetos;
 		}
 		
+		public function ObtenerPorColumna($columna, $valor){
+			
+			$query = '';
+			$columnas = $this->ObtenerTextoColumnas();
+			
+			$query ='select '.$columnas.' from '.$this->nombreTabla.' where '.$columna.' = ';
+			if(is_string($valor)){
+				$query = $query."'".$valor."'";
+			} else{
+				$query = $query.$valor;
+			}
+			
+			$bd = new ConexionDB();
+			$resultado = $bd->exec_query($query);
+			$row = mysqli_fetch_array($resultado);
+			return $this->RellenarObjeto($row);
+		}
+
 		public function ObtenerPorId($id){
 			
 			$query = '';
@@ -103,9 +123,7 @@
 			$bd = new ConexionDB();
 			$resultado = $bd->exec_query($query);
 			$row = mysqli_fetch_array($resultado);
-			echo $row[1];
-			return $this->RellenarObjeto($row);
-			 	
+			return $this->RellenarObjeto($row);			 	
 		}
 		
 		

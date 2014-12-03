@@ -16,7 +16,6 @@
 		public $prueba;
 		public $mono;
 		public $ojo;
-
 	}
 		
 		

@@ -1,4 +1,16 @@
+<?php
+include("fondo.php");
+include("Config/config.php");
 
+if(isset($_POST['email']) && isset($_POST['password'])){
+  $medicoCon = new t_medico_Controlador();
+  $user = $medicoCon->IniciarSesion($_POST['email'], $_POST['password']);
+  if($user){
+    echo 'Welcome';
+  } else {echo 'Contrasena invalida';}
+}
+
+?>
 
 <!DOCTYPE html>
 
@@ -38,31 +50,26 @@
     <div class="col-xs-0 col-sm-0 col-md-4 col-lg-4">
     </div>
     <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 well">
-     
-          <div class="form-group">
-            <h3 >Login</h3>
-            
-            <input type="text" class="form-control" name="id_medico" id="nombre" placeholder="Nombre de medico" required autofocus>
-            <br>
-            <input type="password" class="form-control" name="nombre" id="id_medico" placeholder="Password (id_medico)" required>
-            <br>
-              <div class="col-xs-0 col-sm-0 col-md-3 col-lg-3">
-              </div>
-             <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
-
-        
+          <form action="login.php" method="POST">
+            <div class="form-group">
+              <h3 >Login</h3>
+              
+              <input type="text" class="form-control" name="email" id="email" placeholder="Email" required autofocus>
+              <br>
+              <input type="password" class="form-control" name="password" id="id_medico" placeholder="Password" required>
+              <br>
+                <div class="col-xs-0 col-sm-0 col-md-3 col-lg-3">
+                </div>
+               <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+               </div>
+            <button class="btn btn-lg btn-primary btn-block" > <a href="configSistema.php">Ingresar</a></button>
+      
+            <button class="btn btn-lg btn-primary btn-block" > <a href="inicio.php">Cancel</a></button>
           </div>
-          </form>
-          <button class="btn btn-lg btn-primary btn-block" > <a href="configSistema.php">Ingresar</a></button>
-    
-        <button class="btn btn-lg btn-primary btn-block" > <a href="inicio.php">Cancel</a></button>
-    
-       
-
-        </div> 
+        </form> 
   </div>
 </div>
-        
+</div>        
    
 
 
