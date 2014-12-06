@@ -2,14 +2,17 @@
 
 class sessionManager{
 
-	public function iniciarSesion($email, $id){
+	public function __construct(){
 		session_start();
+	}
+
+	public function iniciarSesion($email, $id){
 		$_SESSION['email'] = $email;
 		$_SESSION['userId'] = $id; 
 	}
 
 	public function existeSesion(){
-		if(isset($_SESSION['email)'])){
+		if(isset($_SESSION['email'])){
 			return true;
 		} else{
 			return false;

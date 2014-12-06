@@ -1,3 +1,10 @@
+<?php      
+    include("fondo.php");
+    include("Config/config.php");
+    
+    $sesion = new sessionManager();
+    $sesion->validarSesion();
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -175,10 +182,6 @@ echo'<OPTION VALUE="'.$row['id_especialidad'].'">'.$row['nombre'].'</OPTION>';
 
 	<script src="js/jquery-1.11.1.min.js"></script>
 	<script src="js/bootstrap.js"></script>
-<?php
-include("fondo.php");
-include("Config/config.php");
-?>
 
 
 

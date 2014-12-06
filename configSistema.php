@@ -1,4 +1,10 @@
-
+<?php      
+    include("fondo.php");
+    include("Config/config.php");
+    
+    $sesion = new sessionManager();
+    $sesion->validarSesion();
+?>
 
 <!DOCTYPE html>
 

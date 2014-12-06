@@ -6,7 +6,8 @@ if(isset($_POST['email']) && isset($_POST['password'])){
   $medicoCon = new t_medico_Controlador();
   $user = $medicoCon->IniciarSesion($_POST['email'], $_POST['password']);
   if($user){
-    echo 'Welcome';
+    echo 'entre al sistema';
+    header('Location: configSistema.php');
   } else {echo 'Contrasena invalida';}
 }
 
@@ -62,9 +63,9 @@ if(isset($_POST['email']) && isset($_POST['password'])){
                 </div>
                <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
                </div>
-            <button class="btn btn-lg btn-primary btn-block" > <a href="configSistema.php">Ingresar</a></button>
+            <button class="btn btn-lg btn-primary btn-block" > Ingresar</button>
       
-            <button class="btn btn-lg btn-primary btn-block" > <a href="inicio.php">Cancel</a></button>
+            <button class="btn btn-lg btn-primary btn-block" > Cancel</button>
           </div>
         </form> 
   </div>
@@ -85,7 +86,7 @@ if(isset($_POST['email']) && isset($_POST['password'])){
 
 
 <script src="js/jquery-1.11.1.min.js"></script>
-  s<script src="js/bootstrap.js"></script>
+<script src="js/bootstrap.js"></script>
     
 </body>
 

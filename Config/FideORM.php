@@ -99,8 +99,8 @@
 			
 			$query = '';
 			$columnas = $this->ObtenerTextoColumnas();
-			
 			$query ='select '.$columnas.' from '.$this->nombreTabla.' where '.$columna.' = ';
+
 			if(is_string($valor)){
 				$query = $query."'".$valor."'";
 			} else{
