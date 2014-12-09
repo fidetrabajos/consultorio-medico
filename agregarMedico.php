@@ -1,8 +1,11 @@
  <meta http-equiv="refresh" content="3;URL=IngresaMedico.php"/>
 
-<?php
-	include ("Config/config.php");
-	include ("fondo.php");
+<?php      
+    include("fondo.php");
+    include("Config/config.php");
+    
+    $sesion = new sessionManager();
+    $sesion->validarSesion();
 
 
 	$ob = new t_medico_Controlador();

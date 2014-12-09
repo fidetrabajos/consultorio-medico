@@ -62,7 +62,7 @@
 <a href="ConsultaMedico.php">Consulta o modificacion de personal</a></p>
 <a href="ConsultaPacientes.php">Consulta o modificacion de pacientes</a></p>
 <a href="ExpedienteMedico.php">Ver expediente de paciente</a></p>
- <button class="btn btn-default"> <a href="inicio.php">Salir del sistema </a></button>
+ <button class="btn btn-default"> <a href="index.php">Salir del sistema </a></button>
 
   </div>
  

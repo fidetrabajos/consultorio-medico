@@ -31,7 +31,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </a>
-        <a class="navbar-brand" href="inicio.php">ClínicaCR</a>
+        <a class="navbar-brand" href="index.php">ClínicaCR</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -99,7 +99,7 @@ echo'<OPTION VALUE="'.$row['id_especialidad'].'">'.$row['nombre'].'</OPTION>';
       
    <br>  
 <center><input type="submit" name="b_buscar" id="b_buscar" value="Buscar" />
-<button class="btn btn-default"> <a href="inicio.php">Volver </a></button>
+<button class="btn btn-default"> <a href="index.php">Volver </a></button>
 </center>
 
 </form>

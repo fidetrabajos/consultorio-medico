@@ -4,7 +4,10 @@
 
 
 include("fondo.php");
-include("Config/config.php");
+    include("Config/config.php");
+    
+    $sesion = new sessionManager();
+    $sesion->validarSesion();
 	
 	
 	$conexion=mysql_connect("localhost","root","") or

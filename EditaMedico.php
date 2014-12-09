@@ -10,8 +10,10 @@
 </head>
 <body>
 <?php
-session_start();
-include("Config/config.php");
+    include("Config/config.php");
+    
+    $sesion = new sessionManager();
+    $sesion->validarSesion();
 include("fondo.php")
 ?>
 
@@ -28,7 +30,7 @@ include("fondo.php")
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </a>
-        <a class="navbar-brand" href="inicio.php">ClínicaCR</a>
+        <a class="navbar-brand" href="index.php">ClínicaCR</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -161,7 +163,7 @@ while($registro = mysql_fetch_array($result)){
     
     
     </div>
-  <center><a href="inicio.php"> <button type="submit" class="btn btn-default">Volver</a></button></center>
+  <center><a href="index.php"> <button type="submit" class="btn btn-default">Volver</a></button></center>
 </div>
 </div>
 </div>

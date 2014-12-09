@@ -1,7 +1,12 @@
  <meta http-equiv="refresh" content="3;URL=IngresaHospital.php"/>
 
-<?php
-	include ("Config/config.php");
+<?php   
+    include("fondo.php");
+    include("Config/config.php");
+    
+    $sesion = new sessionManager();
+    $sesion->validarSesion();
+
 	include ("fondo.php");
 
 	$ob = new t_hospital_Controlador();

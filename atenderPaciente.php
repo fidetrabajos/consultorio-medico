@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+	<!DOCTYPE html>
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
@@ -54,7 +54,7 @@
    <hr>
    <p>
  <center> <button type="submit" class="btn btn-default"><a href="IngresaCitaMedica.php">Ingresar</a></button>
- <button class="btn btn-default"> <a href="inicio.php">Volver </a></button></center>
+ <button class="btn btn-default"> <a href="index.php">Volver </a></button></center>
  </p>
  
 
@@ -76,9 +76,11 @@
 	<script src="js/jquery-1.11.1.min.js"></script>
 	<script src="js/bootstrap.js"></script>
 <?php
-session_start();
 include("fondo.php")
-
+    include("Config/config.php");
+    
+    $sesion = new sessionManager();
+    $sesion->validarSesion();
 
 ?>
 

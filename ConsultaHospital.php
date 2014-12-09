@@ -25,7 +25,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </a>
-        <a class="navbar-brand" href="inicio.php">ClínicaCR</a>
+        <a class="navbar-brand" href="index.php">ClínicaCR</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -173,7 +173,7 @@ echo'<OPTION VALUE="'.$row['id_hospital'].'">'.$row['nombre'].'</OPTION>';
      </div>       </div>      
         
         <br>
-  <center><a href="inicio.php"> <button type="submit" class="btn btn-default">Volver</button></a></center>
+  <center><a href="index.php"> <button type="submit" class="btn btn-default">Volver</button></a></center>
 
 		</div>
 
@@ -189,7 +189,6 @@ echo'<OPTION VALUE="'.$row['id_hospital'].'">'.$row['nombre'].'</OPTION>';
 	<script src="js/jquery-1.11.1.min.js"></script>
 	<script src="js/bootstrap.js"></script>
 <?php
-session_start();
 include("fondo.php")
 
 

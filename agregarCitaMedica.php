@@ -3,7 +3,9 @@
 <?php
 	include ("Config/config.php");
 	include ("fondo.php");
-
+    
+    $sesion = new sessionManager();
+    $sesion->validarSesion();
 	$ob = new t_cita_medica_Controlador();
 	$cita = new t_cita_medica();
 	

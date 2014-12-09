@@ -35,7 +35,7 @@ include("Config/config.php");
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </a>
-        <a class="navbar-brand" href="inicio.php">ClínicaCR</a>
+        <a class="navbar-brand" href="index.php">ClínicaCR</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -151,7 +151,7 @@ include("Config/config.php");
  
 </p>
 </form>
-<button  class="btn btn-default"><a href="inicio.php">Cancelar</a></button></center>
+<button  class="btn btn-default"><a href="index.php">Cancelar</a></button></center>
 </div>
 
     </div>

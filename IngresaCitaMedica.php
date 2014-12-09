@@ -24,7 +24,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </a>
-        <a class="navbar-brand" href="inicio.php">ClínicaCR</a>
+        <a class="navbar-brand" href="index.php">ClínicaCR</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -134,7 +134,7 @@ function myFunction() {
 }
 </script>
  
-<button class="btn btn-default"> <a href="inicio.php">Volver </a></button></center></p>
+<button class="btn btn-default"> <a href="index.php">Volver </a></button></center></p>
 </form>
 
 </div>
@@ -153,9 +153,8 @@ function myFunction() {
 	<script src="js/jquery-1.11.1.min.js"></script>
 	<script src="js/bootstrap.js"></script>
 <?php
-session_start();
-include("fondo.php");
-include("Config/config.php");
+include("fondo.php");    include("Config/config.php");
+    
 
 
 ?>

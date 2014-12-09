@@ -1,3 +1,10 @@
+<?php      
+    include("fondo.php");
+    include("Config/config.php");
+    
+    $sesion = new sessionManager();
+    $sesion->validarSesion();
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -24,7 +31,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </a>
-        <a class="navbar-brand" href="inicio.php">ClínicaCR</a>
+        <a class="navbar-brand" href="index.php">ClínicaCR</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -159,7 +166,7 @@ echo'<OPTION VALUE="'.$row['id_especialidad'].'">'.$row['nombre'].'</OPTION>';
   </div>
    <hr>
 <p> <center> <input type="submit" name="agregar" id="agregar" value="Agregar" />
- <button  class="btn btn-default"><a href="inicio.php">Cancelar</a></button></center>
+ <button  class="btn btn-default"><a href="index.php">Cancelar</a></button></center>
 </p>
 </form>
 

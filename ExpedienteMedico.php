@@ -24,7 +24,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </a>
-        <a class="navbar-brand" href="inicio.php">ClínicaCR</a>
+        <a class="navbar-brand" href="index.php">ClínicaCR</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -70,6 +70,10 @@
   <select name="id_paciente" class="form-control" id="id_paciente">
         <option>...</option>
         <?php 
+            include("Config/config.php");
+    
+    $sesion = new sessionManager();
+    $sesion->validarSesion();
 $conexion=mysql_connect("localhost","root","") or
 die("Problemas en la conexion");
 mysql_select_db("consultoriomedico",$conexion) or
@@ -191,7 +195,6 @@ $consulta = "select c.id_cita , e.fecha , p.nombre as paciente , m.nombre as doc
 <script src="js/jquery-1.11.1.min.js"></script>
 <script src="js/bootstrap.js"></script>
 <?php
-session_start();
 include("fondo.php")
 
 

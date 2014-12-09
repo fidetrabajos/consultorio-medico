@@ -1,4 +1,4 @@
-<meta http-equiv="refresh" content="3;URL=inicio.php"/>
+<meta http-equiv="refresh" content="3;URL=index.php"/>
 
 <?php
 	include ("Config/config.php");

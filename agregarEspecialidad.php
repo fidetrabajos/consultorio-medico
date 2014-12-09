@@ -1,11 +1,11 @@
 <meta http-equiv="refresh" content="3;URL=IngresaEspecializacion.php"/> 
 
-<?php
-	include ("Config/config.php");
-	include ("fondo.php");
-
-	
-
+<?php      
+    include("fondo.php");
+    include("Config/config.php");
+    
+    $sesion = new sessionManager();
+    $sesion->validarSesion();
 	
 	$espeDAO = new t_especialidad_Controlador();
 	$especialidad = new t_especialidad();
